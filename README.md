@@ -80,8 +80,4 @@ pip install GitPython PyGithub
 - **Logout:** Log out of your GitHub account.
 - **Exit:** Quit the program.
 
-## License
-MIT
-
-## Author
-- [Ang3110](https://github.com/Ang3110)
+thanks to GitHub Copilot for its merge feature; the process of getting it working proved to be quite challenge.
