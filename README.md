@@ -24,6 +24,30 @@ A powerful, terminal-based tool for managing your GitHub repositories with ease.
   - Built-in help menu for quick reference.
   - About page for project information.
 
+## Installation & Dependencies
+
+1. Ensure you have Python 3.7+ installed.
+2. (Recommended) Set up a Python virtual environment. This is especially helpful if you encounter SSH permission conflicts or broken Python configurations:
+   - On Linux & macOS:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   - On Windows (Command Prompt):
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+3. Install dependencies:
+   ```bash
+   pip install GitPython PyGithub inquirer
+   ```
+   If you see an error about `inquirer` missing, simply run:
+   ```bash
+   pip install inquirer
+   ```
+4. Place your GitHub Personal Access Token in a file named `token` in the project directory, or enter it when prompted.
+
 ## Getting Started
 
 ### Prerequisites
@@ -80,4 +104,9 @@ pip install GitPython PyGithub
 - **Logout:** Log out of your GitHub account.
 - **Exit:** Quit the program.
 
-thanks to GitHub Copilot for its merge feature; the process of getting it working proved to be quite challenge.
+### Acknowledgments
+
+- **Python.org & github.com**: For the excellent documentation on standard libraries that made this project possible
+- **windsurf**: for its merge feature; the process of getting it working proved to be quite a challenge.
+
+For questions, feedback, or collaboration, feel free to create an issue on my github.
