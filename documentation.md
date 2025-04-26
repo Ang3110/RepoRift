@@ -33,11 +33,26 @@ RepoRift is a terminal-based tool for seamless management of GitHub repositories
 
 ## Installation
 1. Ensure you have Python 3.7+ installed.
-2. Install dependencies:
+2. (Recommended) Set up a Python virtual environment. This is especially helpful if you encounter SSH permission conflicts or broken Python configurations:
+   - On Linux & macOS:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   - On Windows (Command Prompt):
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+3. Install dependencies:
    ```bash
-   pip install GitPython PyGithub
+   pip install GitPython PyGithub inquirer
    ```
-3. Place your GitHub Personal Access Token in a file named `token` in the project directory, or enter it when prompted.
+   If you see an error about `inquirer` missing, simply run:
+   ```bash
+   pip install inquirer
+   ```
+4. Place your GitHub Personal Access Token in a file named `token` in the project directory, or enter it when prompted.
 
 ---
 
@@ -106,6 +121,9 @@ A: After selecting the file, choose the custom destination option and enter the 
 
 **Q: Is my token safe?**  
 A: Yes. Tokens are stored securely and deleted on logout.
+
+**Q: Will my token transfer if I move the program to a different directory or a new machine?**  
+A: No. The token is stored in a file named `token` in the same directory as the program. If you move the program to a new directory or machine, you must also move the `token` file with it (or re-enter your token when prompted).
 
 ---
 
